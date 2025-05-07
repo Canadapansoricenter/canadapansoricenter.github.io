@@ -1,47 +1,61 @@
-<!-- event3.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lecture - Canada Pansori Center</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-image: url("images/your-background.jpg");
       background-size: cover;
-      background-attachment: fixed;
       background-position: center;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
       color: #333;
-      margin: 0;
     }
-    .container {
+
+    section {
+      background-color: rgba(255, 255, 255, 0.9);
       max-width: 800px;
       margin: 5rem auto;
-      background: rgba(255, 255, 255, 0.95);
       padding: 2rem;
       border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     h1 {
-      color: #5d4037;
       text-align: center;
+      color: #5d4037;
     }
-    a {
-      display: block;
+
+    .back-button {
       text-align: center;
       margin-top: 2rem;
-      color: #5d4037;
+    }
+
+    .back-button a {
+      background-color: #5d4037;
+      color: white;
+      padding: 0.75rem 1.5rem;
       text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #3e2723;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <section>
     <h1>Lecture</h1>
-    <p>
-      Learn more about Korean traditional music through our lectures and educational events. Topics, schedules, and resources will be shared here.
-    </p>
-    <a href="index.html">← Back to Home</a>
-  </div>
+    <p>Learn about the history, philosophy, and techniques of Pansori through our special lecture series.</p>
+
+    <div class="back-button">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
 </body>
 </html>
