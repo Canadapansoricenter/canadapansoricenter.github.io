@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery - Canada Pansori Center</title>
+  <title>Canada Pansori Center</title>
   <style>
     * {
       margin: 0;
@@ -13,40 +13,112 @@
     }
 
     body {
+      line-height: 1.6;
       background-image: url("images/your-background.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center center;
+      background-size: cover;
       background-attachment: fixed;
       color: #333;
     }
 
     header {
       background-color: rgba(93, 64, 55, 0.85);
-      color: white;
+      color: #fff;
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    nav {
+      background: rgba(62, 39, 35, 0.9);
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu li {
+      position: relative;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      display: inline-block;
+    }
+
+    .nav-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #5d4037;
+      min-width: 160px;
+      z-index: 999;
+    }
+
+    .dropdown-content li {
+      display: block;
+    }
+
+    .dropdown-content a {
+      padding: 0.75rem 1rem;
+      display: block;
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     section {
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
-      padding: 4rem 2rem;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    h2 {
-      text-align: center;
+    section h2 {
       font-size: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
+    footer {
+      background: rgba(215, 204, 200, 0.95);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Gallery styling */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .gallery-grid img {
@@ -54,7 +126,8 @@
       height: auto;
       border-radius: 8px;
       object-fit: cover;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
       transition: transform 0.3s ease;
     }
 
@@ -62,44 +135,108 @@
       transform: scale(1.05);
     }
 
-    .back-button {
-      display: block;
-      text-align: center;
-      margin-top: 3rem;
+    /* Modal styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
     }
 
-    .back-button a {
+    .modal img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+    }
+
+    .modal:target {
+      display: flex;
+    }
+
+    .back-home {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .back-home a {
       background-color: #5d4037;
       color: white;
       padding: 0.75rem 1.5rem;
-      text-decoration: none;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s;
     }
 
-    .back-button a:hover {
+    .back-home a:hover {
       background-color: #3e2723;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Gallery</h1>
+  <header id="home">
+    <h1>Canada Pansori Center</h1>
   </header>
 
-  <section>
-    <h2>Memorable Moments</h2>
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li class="dropdown">
+        <a href="#events">Events ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="event1.html">Workshop</a></li>
+          <li><a href="event2.html">Performance</a></li>
+          <li><a href="event3.html">Lecture</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="index.html#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section id="gallery">
+    <h2>Gallery - 청출어람</h2>
     <div class="gallery-grid">
-      <img src="images/photo1.jpg" alt="Photo 1">
-      <img src="images/photo2.jpg" alt="Photo 2">
-      <img src="images/photo3.jpg" alt="Photo 3">
-      <!-- 추가 이미지도 여기에 계속 추가 가능 -->
+      <a href="#img1"><img src="images/photo1.jpg" alt="Event Photo 1" /></a>
+      <a href="#img2"><img src="images/photo2.jpg" alt="Event Photo 2" /></a>
+      <a href="#img3"><img src="images/photo3.jpg" alt="Event Photo 3" /></a>
+      <a href="#img4"><img src="images/photo4.jpg" alt="Event Photo 4" /></a>
+      <a href="#img5"><img src="images/photo5.jpg" alt="Event Photo 5" /></a>
+      <a href="#img6"><img src="images/photo6.jpg" alt="Event Photo 6" /></a>
     </div>
 
-    <div class="back-button">
-      <a href="index.html">← Back to Home</a>
+    <!-- Modal images -->
+    <div id="img1" class="modal"><img src="images/photo1.jpg" alt="Modal 1" /></div>
+    <div id="img2" class="modal"><img src="images/photo2.jpg" alt="Modal 2" /></div>
+    <div id="img3" class="modal"><img src="images/photo3.jpg" alt="Modal 3" /></div>
+    <div id="img4" class="modal"><img src="images/photo4.jpg" alt="Modal 4" /></div>
+    <div id="img5" class="modal"><img src="images/photo5.jpg" alt="Modal 5" /></div>
+    <div id="img6" class="modal"><img src="images/photo6.jpg" alt="Modal 6" /></div>
+
+    <div class="back-home">
+      <a href="index.html">Back to Home</a>
     </div>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Canada Pansori Center</p>
+  </footer>
 </body>
 </html>
