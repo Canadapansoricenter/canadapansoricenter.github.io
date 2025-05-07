@@ -6,76 +6,56 @@
   <title>Workshop - Canada Pansori Center</title>
   <style>
     body {
-      margin: 0;
+      background-image: url("images/your-background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       font-family: Arial, sans-serif;
-      background-color: #fff8e1;
       color: #333;
-      line-height: 1.6;
     }
 
-    header {
-      background-color: #5d4037;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    nav {
-      background: #3e2723;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 2rem;
+    section {
+      background-color: rgba(255, 255, 255, 0.9);
       max-width: 800px;
-      margin: auto;
+      margin: 5rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    h2 {
+    h1 {
+      text-align: center;
       color: #5d4037;
     }
 
-    footer {
+    .back-button {
       text-align: center;
-      padding: 1rem;
-      background-color: #d7ccc8;
-      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    .back-button a {
+      background-color: #5d4037;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #3e2723;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Canada Pansori Center</h1>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#events">Events</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <h2>Workshop</h2>
-    <p>This page will showcase details of our workshop events, including dates, registration info, and photos.</p>
-    <p>Stay tuned for more information about our next workshop!</p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Canada Pansori Center</p>
-  </footer>
+  <section>
+    <h1>Workshop</h1>
+    <p>This is the page for our Pansori workshops. Stay tuned for upcoming dates and registration details.</p>
+    
+    <div class="back-button">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
 </body>
 </html>
