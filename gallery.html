@@ -13,13 +13,33 @@
     }
 
     body {
-      background-color: #fff8e1;
+      background-image: url("images/your-background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
       color: #333;
+    }
+
+    header {
+      background-color: rgba(93, 64, 55, 0.85);
+      color: white;
+      text-align: center;
       padding: 2rem;
     }
 
-    h1 {
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
       text-align: center;
+      font-size: 2rem;
       margin-bottom: 2rem;
     }
 
@@ -27,8 +47,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
-      max-width: 1000px;
-      margin: 0 auto;
     }
 
     .gallery-grid img {
@@ -36,21 +54,52 @@
       height: auto;
       border-radius: 8px;
       object-fit: cover;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
 
     .gallery-grid img:hover {
       transform: scale(1.05);
     }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-button a {
+      background-color: #5d4037;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #3e2723;
+    }
   </style>
 </head>
 <body>
-  <h1>Gallery</h1>
-  <div class="gallery-grid">
-    <img src="images/photo1.jpg" alt="Gallery Image 1" />
-    <img src="images/photo2.jpg" alt="Gallery Image 2" />
-    <img src="images/photo3.jpg" alt="Gallery Image 3" />
-  </div>
+  <header>
+    <h1>Gallery</h1>
+  </header>
+
+  <section>
+    <h2>Memorable Moments</h2>
+    <div class="gallery-grid">
+      <img src="images/photo1.jpg" alt="Photo 1">
+      <img src="images/photo2.jpg" alt="Photo 2">
+      <img src="images/photo3.jpg" alt="Photo 3">
+      <!-- 추가 이미지도 여기에 계속 추가 가능 -->
+    </div>
+
+    <div class="back-button">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
 </body>
 </html>
