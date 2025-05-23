@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Canada Pansori Center</title>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <style>
@@ -15,32 +15,23 @@
 
     body {
       line-height: 1.6;
-      background-color: #f9f9f9;
+      background-image: url("images/your-background.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
       color: #333;
     }
 
     header {
       background-color: rgba(93, 64, 55, 0.85);
       color: #fff;
-      padding: 2rem;
+      padding: 4rem 2rem;
+      text-align: center;
     }
 
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .header-logo {
-      width: 80px;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .header-content h1 {
-      font-size: 2.5rem;
+    header h1 {
+      font-size: 3rem;
     }
 
     nav {
@@ -58,9 +49,9 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
-      flex-wrap: wrap;
       margin: 0;
       padding: 0;
+      flex-wrap: wrap;
     }
 
     .nav-menu li {
@@ -107,10 +98,9 @@
       padding: 4rem 2rem;
       max-width: 800px;
       margin: auto;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-top: 2rem;
     }
 
     section h2 {
@@ -143,16 +133,10 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      margin-top: 2rem;
     }
 
     @media (max-width: 600px) {
-      .header-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .header-content h1 {
+      header h1 {
         font-size: 2rem;
       }
 
@@ -164,20 +148,16 @@
   </style>
 </head>
 <body>
-
   <header id="home">
-    <div class="header-content">
-      <img src="images/your-background.png" alt="Canada Pansori Logo" class="header-logo">
-      <h1>Canada Pansori Center</h1>
-    </div>
+    <h1>Canada Pansori Center</h1>
   </header>
 
   <nav>
     <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li class="dropdown">
-        <a href="#">Events ▾</a>
+        <a href="#events">Events ▾</a>
         <ul class="dropdown-content">
           <li><a href="event1.html">Workshop</a></li>
           <li><a href="event2.html">Performance</a></li>
@@ -191,7 +171,9 @@
 
   <section id="events">
     <h2>Events</h2>
-    <p>Stay tuned for our upcoming workshops, performances, and community events.</p>
+    <p>
+      Stay tuned for our upcoming workshops, performances, and community events.
+    </p>
   </section>
 
   <section id="contact">
@@ -222,7 +204,6 @@
       <button type="submit">Submit</button>
     </form>
   </section>
-
   <section id="donation">
     <h2>Donation and Support</h2>
     <p>
@@ -235,6 +216,5 @@
   <footer>
     <p>&copy; 2023 Canada Pansori Center</p>
   </footer>
-
 </body>
 </html>
