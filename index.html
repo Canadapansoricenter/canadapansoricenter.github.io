@@ -15,12 +15,16 @@
 
     body {
       line-height: 1.6;
-      background-image: url("images/your-background.png");
+      background-image: url("your-background.png"); /* 이미지와 HTML이 같은 폴더에 있을 경우 */
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
       background-attachment: fixed;
       color: #333;
+    }
+
+    section[id] {
+      scroll-margin-top: 100px;
     }
 
     header {
@@ -204,6 +208,7 @@
       <button type="submit">Submit</button>
     </form>
   </section>
+
   <section id="donation">
     <h2>Donation and Support</h2>
     <p>
