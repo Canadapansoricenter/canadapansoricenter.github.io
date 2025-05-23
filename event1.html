@@ -22,6 +22,27 @@
       color: #333;
     }
 
+    nav {
+      background: #3e2723;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
       background-color: rgba(255, 255, 255, 0.9);
       max-width: 800px;
@@ -57,6 +78,13 @@
       border-radius: 8px;
     }
 
+    .poster-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
     .back-button {
       text-align: center;
       margin-top: 3rem;
@@ -75,9 +103,30 @@
     .back-button a:hover {
       background-color: #3e2723;
     }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      section {
+        margin: 2rem 1rem;
+        padding: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="event1.html">Event</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
   <section>
     <h1>Workshop</h1>
     <p>This is the page for our Pansori workshops. Stay tuned for upcoming dates and registration details.</p>
@@ -91,12 +140,10 @@
         Join us for a special master class on <em>Chuwolmanjeong (추월만정)</em>, a timeless piece in the Pansori repertoire.
         This session is ideal for both beginners and seasoned enthusiasts who wish to deepen their appreciation of Korean traditional vocal performance.
       </p>
-          <div class="poster-image">
-      <img src="images/chuwolmanjeong-poster.jpg" alt="Chuwolmanjeong Master Class Poster" style="max-width: 100%; border-radius: 8px; margin-top: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <div class="poster-image">
+        <img src="images/chuwolmanjeong-poster.jpg" alt="Chuwolmanjeong Master Class Poster">
+      </div>
     </div>
-
-    </div>
-    
 
     <div class="back-button">
       <a href="index.html">← Back to Home</a>
