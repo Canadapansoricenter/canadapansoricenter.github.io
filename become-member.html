@@ -25,6 +25,55 @@
       font-size: 2.5rem;
     }
 
+    nav {
+      background-color: #3e2723;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a, nav .dropbtn {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      display: block;
+      font-weight: bold;
+    }
+
+    nav a:hover, nav .dropdown:hover .dropbtn {
+      background-color: #4e342e;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #5d4037;
+      min-width: 160px;
+      z-index: 1;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #4e342e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     main {
       max-width: 800px;
       margin: auto;
@@ -76,23 +125,23 @@
     <h1>Become a Member</h1>
     <p>Join the Canada Pansori Center as a supporting member</p>
   </header>
+
   <nav>
-    <ul class="nav-menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li class="dropdown">
-        <a href="#events">Events ▾</a>
-        <ul class="dropdown-content">
-          <li><a href="event1.html">Workshop</a></li>
-          <li><a href="event2.html">Performance</a></li>
-          <li><a href="event3.html">Lecture</a></li>
-        </ul>
-      </li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="become-member.html">Become a Member</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <div class="dropdown">
+      <a href="#" class="dropbtn">Events ▾</a>
+      <div class="dropdown-content">
+        <a href="event1.html">Workshop</a>
+        <a href="event2.html">Performance</a>
+        <a href="event3.html">Lecture</a>
+      </div>
+    </div>
+    <a href="gallery.html">Gallery</a>
+    <a href="become-member.html">Become a Member</a>
+    <a href="contact.html">Contact Us</a>
   </nav>
+
   <main>
     <section>
       <h2>How to Register</h2>
