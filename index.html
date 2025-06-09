@@ -11,18 +11,6 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Nanum Gothic', sans-serif;
-    .main-image {
-  text-align: center;
-  margin-top: -2rem;
-  margin-bottom: 2rem;
-}
-
-.main-image img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
     }
 
     body {
@@ -49,9 +37,20 @@
     header h1 {
       font-size: 3rem;
     }
-<div class="main-image">
-  <img src="your-image.jpg" alt="Main Image" />
-</div>
+
+    .main-image {
+      text-align: center;
+      margin-top: -2rem;
+      margin-bottom: 2rem;
+    }
+
+    .main-image img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
     nav {
       background: rgba(62, 39, 35, 0.9);
       color: #fff;
@@ -118,7 +117,7 @@
       margin: auto;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     section h2 {
@@ -170,6 +169,10 @@
     <h1>Canada Pansori Center</h1>
   </header>
 
+  <div class="main-image">
+    <img src="your-image.jpg" alt="Main Image" />
+  </div>
+
   <nav>
     <ul class="nav-menu">
       <li><a href="#home">Home</a></li>
@@ -190,9 +193,7 @@
 
   <section id="events">
     <h2>Events</h2>
-    <p>
-      Sori25 coming July to Sept 2025
-    </p>
+    <p>Sori25 coming July to Sept 2025</p>
   </section>
 
   <section id="contact">
