@@ -36,15 +36,53 @@
       text-align: center;
     }
 
-    nav a {
+    .nav-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .nav-menu li {
+      position: relative;
+    }
+
+    .nav-menu a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+      display: inline-block;
     }
 
-    nav a:hover {
+    .nav-menu a:hover {
       text-decoration: underline;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #5d4037;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content li {
+      display: block;
+    }
+
+    .dropdown-content a {
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .gallery-section {
@@ -137,6 +175,15 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropdown-content {
+        position: static;
+      }
     }
   </style>
 </head>
@@ -145,8 +192,8 @@
     <h1>Gallery</h1>
   </header>
 
- <nav>
-   <ul class="nav-menu">
+  <nav>
+    <ul class="nav-menu">
       <li><a href="#home">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li class="dropdown">
@@ -161,8 +208,7 @@
       <li><a href="become-member.html">Become a Member</a></li>
       <li><a href="#contact">Contact Us</a></li>
     </ul>
-</nav>
-
+  </nav>
 
   <section class="gallery-section">
     <h2>Our Moments</h2>
@@ -192,7 +238,7 @@
     </div>
 
     <div class="back-button">
-      <a href="index.html">Back to Home</a>
+      <a href="index.html">← Back to Home</a>
     </div>
   </section>
 
@@ -204,8 +250,5 @@
       document.getElementById(tab + '-btn').classList.add('active');
     }
   </script>
-   <div class="back-button">
-      <a href="index.html">← Back to Home</a>
-    </div>
 </body>
 </html>
