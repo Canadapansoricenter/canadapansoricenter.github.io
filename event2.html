@@ -11,65 +11,64 @@
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-     body {
-      line-height: 1.6;
-      background-image: url("your-background.png"); /* 이미지와 HTML이 같은 폴더에 있을 경우 */
+      background-image: url("your-background.png");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
       background-attachment: fixed;
       color: #333;
+      line-height: 1.6;
     }
-nav {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 
-.nav-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
+    nav {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-.nav-menu li {
-  position: relative;
-}
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
 
-.nav-menu a {
-  text-decoration: none;
-  color: #5d4037;
-  font-weight: bold;
-}
+    .nav-menu li {
+      position: relative;
+    }
 
-.nav-menu .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  z-index: 10;
-  min-width: 180px;
-}
+    .nav-menu a {
+      text-decoration: none;
+      color: #5d4037;
+      font-weight: bold;
+    }
 
-.nav-menu .dropdown:hover .dropdown-content {
-  display: block;
-}
+    .nav-menu .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      padding: 0.5rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      z-index: 10;
+      min-width: 180px;
+    }
 
-.dropdown-content li {
-  padding: 0.5rem 1rem;
-}
+    .nav-menu .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-.dropdown-content li a {
-  color: #5d4037;
-}
+    .dropdown-content li {
+      padding: 0.5rem 1rem;
+    }
+
+    .dropdown-content li a {
+      color: #5d4037;
+    }
 
     header {
       background-color: #5d4037;
@@ -95,6 +94,7 @@ nav {
     main h2 {
       margin-top: 0;
       font-size: 2rem;
+      color: #4e342e;
     }
 
     .poster {
@@ -111,11 +111,37 @@ nav {
       margin-bottom: 2rem;
     }
 
+    a.button {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #5d4037;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background-color: #3e2723;
+    }
+
     footer {
       background-color: #d7ccc8;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 2rem;
+    }
+
+    .back-button a {
+      color: #5d4037;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -124,7 +150,8 @@ nav {
   <header>
     <h1>Sori25</h1>
   </header>
-<nav>
+
+  <nav>
     <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
@@ -141,41 +168,35 @@ nav {
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
+
   <main>
     <div class="poster">
-      
       <img src="sori25-poster.jpg" alt="Sori25 Poster"> 
-      </p>
     </div>
 
     <section>
       <h2>Event Information</h2>
+      <p><strong>SORI25</strong> is a two-part program that invites participants of all backgrounds to explore Korean music and create meaningful sounds together.</p>
+
+      <p><strong>Part 1: Pansori Workshop</strong><br>
+      Discover the expressive world of pansori, minyo (folk songs), and other Korean vocal forms.</p>
+      <p><strong>When:</strong> Wednesdays, 6–8 PM | July–September 2025<br>
+         <strong>Where:</strong> North York Central Library (near North York Station)</p>
+
+      <p><strong>Part 2: Rehearsal & Concert</strong><br>
+      After the workshop series, we’ll move into rehearsals to prepare for a special participant concert in November.</p>
+      <p><strong>When:</strong> October (Rehearsals) & November (Concert)<br>
+         <strong>Where:</strong> Location TBD</p>
+
+      <p>This program is proudly supported by the Toronto Arts Council, allowing us to offer accessible pricing:</p>
+      <ul>
+        <li><strong>$60</strong> for 2025 Canada Pansori Center members</li>
+        <li><strong>$120</strong> for non-members</li>
+      </ul>
       <p>
-       SORI25 is a two-part program that invites participants of all backgrounds to explore Korean music and create meaningful sounds together. 
-
-Part 1: Pansori Workshop
-
-Discover the expressive world of pansori, minyo (folk songs), and other Korean vocal forms.
+        <a href="become-member.html" class="button">Become a member here</a> to enjoy the discounted rate.
       </p>
-      <p><strong>When:</strong> [Wednesdays, 6–8 PM | July–September 2025]</p>
-      <p><strong>Where:</strong> [North York Central Library (near North York Station)]</p>
-
-Part 2: Rehearsal & Concert
-
-After the workshop series, we’ll move into rehearsals to prepare for a special participant concert in November. 
-
-       </p>
-      <p><strong>When:</strong> [October (Rehearsals) & November (Concert)]</p>
-      <p><strong>Where:</strong> [Location TBD]</p>
-
-      This program is proudly supported by the Toronto Arts Council, allowing us to offer accessible pricing:
-
-$60 for 2025 Canada Pansori Center members
-$120 for non-members
-    </section>
-
-    <section>
-      
+      <p>We look forward to welcoming you to the SORI25 family!</p>
     </section>
 
     <section>
@@ -185,17 +206,12 @@ $120 for non-members
     </section>
   </main>
 
+  <div class="back-button">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
   <footer>
     <p>&copy; 2023 Canada Pansori Center</p>
   </footer>
- <div class="back-button">
-      <a href="index.html">← Back to Home</a>
-    </div>
-     </div>
-    
-
-    <div class="back-button">
-      <a href="index.html">← Back to Home</a>
-    </div>
 </body>
 </html>
